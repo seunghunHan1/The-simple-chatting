@@ -23,7 +23,9 @@
 			<v-btn :disabled="!valid" color="primary" class="mr-3" @click="submitForm"
 				>로그인</v-btn
 			>
-			<v-btn color="grey lighten-2">회원가입</v-btn>
+			<v-btn color="grey lighten-2"
+				><router-link to="/register">회원가입</router-link></v-btn
+			>
 		</v-row>
 	</v-form>
 </template>
@@ -51,4 +53,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+a {
+	text-decoration: none;
+	color: #222 !important;
+}
+</style>

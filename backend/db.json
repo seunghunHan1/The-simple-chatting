@@ -2,15 +2,18 @@
   "users": [
     {
       "email": "test@test.com",
-      "password": "$2a$10$3zsJr1UOn1HuylPLs92STuuJ.QRTXhsu79fyea4/WpjCk64vYsAKq",
-      "name": "HanSeungHun",
+      "password": "$2a$10$mPgitNGizLHIGOcXcCceQ.MLEIUswB3hdv8Za/MpNcarje93.UBle",
+      "name": "테스트계정",
+      "phoneNumber": "33526072",
       "id": 1
-    },
+    }
+  ],
+  "message": [
     {
-      "email": "admin@admin.com",
-      "password": "$2a$10$hdwR5vAmcaBb/wK7az6VnewGgMU9sI648sTiEuZQKqx77qAK4/RbK",
-      "name": "HanSeungMin",
-      "id": 2
+      "avatar": "https://cdn.vuetifyjs.com/images/lists/4.jpg",
+      "writer": "테스트계정",
+      "content": "하하하하",
+      "id": 1
     }
   ]
 }

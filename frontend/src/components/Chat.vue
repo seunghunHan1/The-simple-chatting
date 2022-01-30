@@ -16,6 +16,7 @@
 <script>
 import ChatList from '@/components/chattings/ChatList.vue';
 import ChatInput from '@/components/chattings/ChatInput.vue';
+import { fetchMessage, insertMessage } from '@/api/chat.js';
 
 export default {
 	name: 'Chat',
@@ -23,7 +24,13 @@ export default {
 		ChatList,
 		ChatInput,
 	},
-	created() {
+	async created() {
+		try {
+			const { data } = await fetchMessage();
+			this.items = data;
+		} catch (err) {
+			console.log(err);
+		}
 		this.$socket.on('chat', data => {
 			this.items.push(data);
 		});
@@ -45,7 +52,7 @@ export default {
 				writer: this.userInfo.name,
 				content: message,
 			};
-
+			insertMessage(messageInfo);
 			this.$socket.emit('chat', messageInfo);
 			this.items.push(messageInfo);
 		},

@@ -15,14 +15,17 @@ const routes = [
 		},
 	},
 	{
-		path: '/about',
-		name: 'About',
-		component: () => import('../views/About.vue'),
+		path: '/login',
+		name: 'Login',
+		component: () => import('../views/LoginPage.vue'),
+		meta: {
+			layout: 'LoginLayout',
+		},
 	},
 	{
-		path: '/login',
-		name: 'About',
-		component: () => import('../views/LoginPage.vue'),
+		path: '/register',
+		name: 'Register',
+		component: () => import('../views/RegisterPage.vue'),
 		meta: {
 			layout: 'LoginLayout',
 		},
